@@ -29,6 +29,8 @@
 		private $host = 'https://api.dropboxapi.com/2/';
 		private $namespacing; 
 		private $endpoint;
+		
+		// api key
 		private $bearer = '' // needed for use of this library;
 		
 		private static $okStatus = array(412);
@@ -100,6 +102,18 @@
 		}
 		
 		/**
+		 * Setter sets bearer; the bearer is the dropbox api key;
+		 * @access public
+		 * @return void
+		 * @params $bearer 
+		 **/
+		 
+		 
+		 public function set_bearer($bearer) {
+			$this->bearer = $bearer;
+		 }
+		
+		/**
 		 * 
 		 * @function account_info
 		 * @access public
@@ -159,7 +173,6 @@
 		 * @params $data
 		 */
 		
-		//add_folder_member
 		public function share_folder($data = null) {
 			return $this->api('sharing', '/share_folder', $data);
 		}
@@ -172,7 +185,6 @@
 		 * @params $data
 		 */
 		
-		//add_folder_member
 		public function folder_add_member($data = null) {
 			return $this->api('sharing', '/add_folder_member', $data);
 		}
@@ -185,7 +197,6 @@
 		 * @params $data
 		 */
 		
-		// /unshare_file
 		public function folder_delete_member($data = null) {
 			return $this->api('sharing', '/remove_folder_member', $data);
 		}
@@ -198,7 +209,6 @@
 		 * @params $data
 		 */
 		
-		// /unshare_file
 		public function metadata($data = null) {
 			return $this->api('files', '/get_metadata', $data);
 		}
