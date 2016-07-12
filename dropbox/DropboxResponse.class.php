@@ -9,7 +9,7 @@
 	*		  marlonlede@gmail.com
 	*
 	*
-	* Location: public - https://github.com/mrlnx/dropbox/ci3-dorpbox-c2-api
+	* Location: public - https://github.com/mrlnx/dropbox/ci3-dorpbox-v2-api
 	*
 	* Created:  08-07-2016
 	*
